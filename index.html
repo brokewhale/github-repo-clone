@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repository</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_content flex flex-ai-c">
+            <div class="header_content-left  flex">
+                <svg class="github-logo" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                    </path>
+                </svg>
+
+                <div class="left_content flex flex-ai-c">
+                    <div class="header-search flex flex-ai-c flex-jc-sb">
+                        <input type="text" placeholder="Search or jump to...">
+                        <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="slash">
+                    </div>
+                    <div class="header_nav flex">
+                        <a href="/#">Pull requests</a>
+                        <a href="/#">Issues</a>
+                        <a href="/#">Marketplace</a>
+                        <a href="/#">Explore</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="header_content-right flex">
+                <a href="/#" class="right_notification flex flex-ai-c">
+                    <svg class="octicon octicon-bell" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                        aria-hidden="true">
+                        <path
+                            d="M8 16a2 2 0 001.985-1.75c.017-.137-.097-.25-.235-.25h-3.5c-.138 0-.252.113-.235.25A2 2 0 008 16z">
+                        </path>
+                        <path fill-rule="evenodd"
+                            d="M8 1.5A3.5 3.5 0 004.5 5v2.947c0 .346-.102.683-.294.97l-1.703 2.556a.018.018 0 00-.003.01l.001.006c0 .002.002.004.004.006a.017.017 0 00.006.004l.007.001h10.964l.007-.001a.016.016 0 00.006-.004.016.016 0 00.004-.006l.001-.007a.017.017 0 00-.003-.01l-1.703-2.554a1.75 1.75 0 01-.294-.97V5A3.5 3.5 0 008 1.5zM3 5a5 5 0 0110 0v2.947c0 .05.015.098.042.139l1.703 2.555A1.518 1.518 0 0113.482 13H2.518a1.518 1.518 0 01-1.263-2.36l1.703-2.554A.25.25 0 003 7.947V5z">
+                        </path>
+                    </svg>
+                </a>
+                <!-- MODAL PART -->
+                <div class="right_profiles flex" tabindex="1">
+                    <div class="header-item flex-ai-c flex">
+
+                        <details class="github_details">
+                            <summary class="flex flex-ai-c">
+                                <svg class="octicon octicon-plus" viewBox="0 0 16 16" version="1.1" width="16"
+                                    height="16" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z">
+                                    </path>
+                                </svg>
+                                <span class="drop_own_caret"></span>
+                            </summary>
+                            <div class="github_mini_modal">
+                                <a href="/#">New repository</a>
+                                <a href="/#">Import repository</a>
+                                <a href="/#">New gist</a>
+                                <a href="/#">New organization</a>
+                                <a href="/#">New project</a>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="header-item m1 flex-ai-c flex">
+
+                        <details class=" github_details">
+                            <summary class="flex flex-ai-c">
+                                <img class="profile_picture" src="https://avatars.dicebear.com/api/identicon/github.svg"
+                                    alt="" srcset="">
+                                <span class="drop_own_caret"></span>
+                            </summary>
+                            <div class="github_mini_modal">
+                                <div class="modal_section">
+                                    <p>Signed in as <strong>Codingmage</strong></p>
+                                </div>
+                                <div class=" modal_section github_status">
+                                    <div class="round-status">
+                                        <svg class="octicon octicon-smiley" viewBox="0 0 16 16" version="1.1" width="16"
+                                            height="16" aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0 111.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.984 1.984 0 01-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946 0-1.652-.308-2.126-.63a3.32 3.32 0 01-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044h.001z">
+                                            </path>
+                                        </svg>
+                                        <span>Set status</span>
+                                    </div>
+                                </div>
+                                <div class="modal_section">
+                                    <a href="/#">Your profile</a>
+                                    <a href="/#">Your repositories</a>
+                                    <a href="/#">Your organizations</a>
+                                    <a href="/#">Your projects</a>
+                                    <a href="/#">Your stars</a>
+                                    <a href="/#">Your gists</a>
+                                </div>
+                                <div class="modal_section">
+                                    <a href="/#">Feature preview</a>
+                                    <a href="/#">Help</a>
+                                    <a href="/#">Settings</a>
+                                    <a href="/#">Sign out</a>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="header_mobile">
+            <button class="hamburger">
+                <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+                    </path>
+                </svg>
+            </button>
+
+            <div class="mobile_logo flex flex-ai-c flex-jc-c">
+                <svg class="logo" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                    </path>
+                </svg>
+            </div>
+
+            <div class="mobile_notification">
+                <svg class="octicon octicon-bell" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                    aria-hidden="true">
+                    <path
+                        d="M8 16a2 2 0 001.985-1.75c.017-.137-.097-.25-.235-.25h-3.5c-.138 0-.252.113-.235.25A2 2 0 008 16z">
+                    </path>
+                    <path fill-rule="evenodd"
+                        d="M8 1.5A3.5 3.5 0 004.5 5v2.947c0 .346-.102.683-.294.97l-1.703 2.556a.018.018 0 00-.003.01l.001.006c0 .002.002.004.004.006a.017.017 0 00.006.004l.007.001h10.964l.007-.001a.016.016 0 00.006-.004.016.016 0 00.004-.006l.001-.007a.017.017 0 00-.003-.01l-1.703-2.554a1.75 1.75 0 01-.294-.97V5A3.5 3.5 0 008 1.5zM3 5a5 5 0 0110 0v2.947c0 .05.015.098.042.139l1.703 2.555A1.518 1.518 0 0113.482 13H2.518a1.518 1.518 0 01-1.263-2.36l1.703-2.554A.25.25 0 003 7.947V5z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+    <!-- JS FILE IMPORT -->
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
