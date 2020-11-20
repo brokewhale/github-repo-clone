@@ -1,7 +1,7 @@
 .main_section {
     padding-top: 20px;
     max-width: 1280px;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 
     @include breakpoint-up(medium) {
         display: flex;
@@ -198,7 +198,8 @@
             z-index: 3;
             border-bottom: 1px solid #d1d5da;
             background-color: white;
-            margin: 0 -15px;
+            // margin: 0 -15px;
+            transition: all 300ms ease-in;
 
             .bottom-nav {
 

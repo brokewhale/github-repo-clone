@@ -360,10 +360,14 @@ details > summary:first-of-type {
   margin-right: 0px !important;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
 .main_section {
   padding-top: 20px;
   max-width: 1280px;
-  overflow-x: hidden;
 }
 
 @media (min-width: 768px) {
@@ -577,7 +581,8 @@ details > summary:first-of-type {
   z-index: 3;
   border-bottom: 1px solid #d1d5da;
   background-color: white;
-  margin: 0 -15px;
+  -webkit-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
 }
 
 .main_section-bottom .bottom_header .bottom-nav_link {

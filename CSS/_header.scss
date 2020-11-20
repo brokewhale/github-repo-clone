@@ -259,3 +259,9 @@ details>summary:first-of-type {
 .m1 {
     margin-right: 0px !important;
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    // width: 100%;
+}
