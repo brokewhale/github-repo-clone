@@ -1,4 +1,4 @@
-console.log('start');
+console.log("start");
 
 //STICKY NAVBAR ALTERNATIVE
 
@@ -18,8 +18,6 @@ console.log('start');
 //         navbar.classList.remove("sticky");
 //     }
 // }
-
-
 
 // {
 //     viewer {
@@ -54,15 +52,13 @@ const queryFetch = (query) => {
     referrerPolicy: "no-referrer",
     headers: {
       "Content-Type": "application/json",
-      authorization: `token 4da385fc4fb0f7910ae879bb5d7f91ff65780568 `,
+      authorization: `token eb9b02065a5a403c9e0352541235e9bec73d5032`,
     },
     body: JSON.stringify({
-      query: query
-    })
-  }).then(res => res.json())
-}
-
-
+      query: query,
+    }),
+  }).then((res) => res.json());
+};
 
 queryFetch(
   `
@@ -77,8 +73,8 @@ queryFetch(
       
       
   }`
-).then(data => {
-  document.getElementById('top_infoid').innerHTML = `
+).then((data) => {
+  document.getElementById("top_infoid").innerHTML = `
            
 
               <div  class="top_info">
@@ -118,10 +114,10 @@ queryFetch(
                 </a>
             </div>
 
-`
-})
+`;
+});
 
-let test = ''
+let test = "";
 
 queryFetch(
   `
@@ -147,24 +143,34 @@ queryFetch(
   }
 
   `
-).then(data => {
-  const myRepos = data.data.user.repositories.nodes;
-  return myRepos
-}).then(myRepos => {
-  console.log(myRepos);
-  document.getElementById('repolist').innerHTML = `
-  ${myRepos.map(myRepo =>
-    repoTemplate(myRepo.name, myRepo.description, myRepo.updatedAt, myRepo.url, myRepo.languages.nodes)
-  ).join('')}
- `
-})
+)
+  .then((data) => {
+    const myRepos = data.data.user.repositories.nodes;
+    return myRepos;
+  })
+  .then((myRepos) => {
+    console.log(myRepos);
+    document.getElementById("repolist").innerHTML = `
+  ${myRepos
+    .map((myRepo) =>
+      repoTemplate(
+        myRepo.name,
+        myRepo.description,
+        myRepo.updatedAt,
+        myRepo.url,
+        myRepo.languages.nodes,
+        myRepo.forkCount
+      )
+    )
+    .join("")}
+ `;
+  });
 
 // myRepos.map(myRepo => {
 //   // console.log(myRepo.name);
 //   // console.log(myRepo.description);
 //   // console.log(myRepo.updatedAt);
 //   // console.log(myRepo.url);
-
 
 //   // myRepo.languages.nodes.map(language => {
 //   //   console.log(language.color);
@@ -174,24 +180,17 @@ queryFetch(
 //   repoTemplate(myRepo.name, myRepo.description, myRepo.updatedAt, myRepo.url, myRepo.languages.nodes)
 //   // repoTemplate()
 
-
-
-
-
-
 // })
 
-
-
-
-
-
-
-function repoTemplate(name, description, updatedAt, url, laguagearray) {
-
-  return (
-
-    `
+function repoTemplate(
+  name,
+  description,
+  updatedAt,
+  url,
+  languagearray,
+  forkCount
+) {
+  return `
             
             <div class="repo-container flex">
             <div class="repo-container_left">
@@ -206,24 +205,38 @@ function repoTemplate(name, description, updatedAt, url, laguagearray) {
                 <div class="repo-des">
 
                     <p class="repo-details">
-                        Easybank landing page from Frontend Mentor
+                    ${description ? description : ""}
                     </p>
                 </div>
-
+         
                 <div class="repo-bottom">
+
+                ${languagearray.map((language) => {
+                  return `
                     <div class="repo-language">
-                        <span class="repo-language-color" style="background-color: #c6538c"></span>
-                        <span class="repo-language-stack">SCSS</span>
-                    </div>
-                    <a href="#" class="fork">
+                    <span class="repo-language-color" style="background-color: ${language.color}"></span>
+                    <span class="repo-language-stack">${language.name}</span>
+                  </div>
+                    `;
+                })}
+                
+
+
+                    ${
+                      forkCount
+                        ? `
+                      <a href="#" class="fork">
                         <svg aria-label="fork" class="octicon octicon-repo-forked" viewBox="0 0 16 16"
                             version="1.1" width="16" height="16" role="img">
                             <path fill-rule="evenodd"
                                 d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z">
                             </path>
                         </svg>
-                        30
+                        ${forkCount}
                     </a>
+                      `
+                        : ""
+                    }
                     updater on 10 days ago
                 </div>
             </div>
@@ -246,15 +259,11 @@ function repoTemplate(name, description, updatedAt, url, laguagearray) {
         </div>
 
 
-            `)
-
-
-
+            `;
 }
-
 
 function testtemp(name) {
   return `
   <h1>hello</h1>
-  `
+  `;
 }

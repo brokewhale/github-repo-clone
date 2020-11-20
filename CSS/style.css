@@ -670,6 +670,7 @@ details > summary:first-of-type {
 }
 
 .repo_list .repo-container_left .forkfrom {
+  display: none;
   font-size: 12px;
   color: #586069;
   margin-bottom: 4px;
