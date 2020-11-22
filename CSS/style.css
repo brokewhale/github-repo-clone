@@ -27,6 +27,7 @@ body {
   position: relative;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   word-wrap: break-word;
+  min-height: 100vh;
 }
 
 h1,
@@ -361,8 +362,7 @@ details > summary:first-of-type {
 }
 
 .sticky {
-  position: fixed;
-  top: 0;
+  opacity: 1 !important;
 }
 
 .main_section {
@@ -381,6 +381,7 @@ details > summary:first-of-type {
 .main_section-top {
   padding: 0 15px;
   margin-bottom: 24px;
+  position: relative;
 }
 
 @media (min-width: 768px) {
@@ -598,8 +599,8 @@ details > summary:first-of-type {
   background-color: initial;
   border: 0;
   border-bottom: 2px solid transparent;
-  -webkit-transition: border-bottom-color .36s ease-in;
-  transition: border-bottom-color .36s ease-in;
+  -webkit-transition: border-bottom-color 0.36s ease-in;
+  transition: border-bottom-color 0.36s ease-in;
 }
 
 .main_section-bottom .bottom_header .bottom-nav_link:hover {
@@ -636,6 +637,164 @@ details > summary:first-of-type {
   background-color: #d1d5da80;
   border: 1px solid transparent;
   border-radius: 2em;
+}
+
+.headertest {
+  height: 0;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .headertest {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    opacity: 0;
+    height: 48.6px;
+    text-align: center;
+    background-color: white;
+    z-index: 999999;
+    overflow: visible;
+    margin-right: -24px;
+    border-bottom: 1px solid #d1d5da;
+    -webkit-transition: all 300ms ease-in;
+    transition: all 300ms ease-in;
+  }
+}
+
+.headertest .small-img {
+  vertical-align: middle;
+  padding-right: 8px;
+  line-height: 1;
+  display: table-cell;
+  height: 48.6px;
+  width: 40px;
+}
+
+.headertest .small-img img {
+  border-style: none;
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+}
+
+.headertest .small-name {
+  display: table-cell;
+  vertical-align: middle;
+  line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+  .commot {
+    visibility: hidden;
+    height: 0;
+  }
+}
+
+.status-anime {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .status-anime {
+    position: absolute;
+    bottom: 89%;
+    left: 78%;
+    z-index: 2;
+    max-width: 38px;
+    height: 38px;
+    color: #586069;
+    font-size: 14px;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid #e1e4e8;
+    border-radius: 2em;
+    -webkit-box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px;
+            box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px;
+    padding: 8px;
+    line-height: 1;
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: middle;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 999;
+    cursor: pointer;
+  }
+  .status-anime .emoji-container svg {
+    vertical-align: middle;
+    margin-right: 8px;
+    fill: #586069;
+    margin-left: 3px;
+  }
+  .status-anime:hover {
+    max-width: unset;
+    color: #0366d6;
+  }
+  .status-anime:hover .emoji-container svg {
+    fill: #0366d6;
+  }
+  .status-anime span {
+    font-size: 12px;
+    -webkit-transition: 0.2s ease-out;
+    transition: 0.2s ease-out;
+    width: 60px;
+  }
+}
+
+#spinner:not([hidden]) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#spinner::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  border: 2px solid #f3f3f3;
+  border-top: 3px solid #0366d6;
+  border-radius: 100%;
+  will-change: transform;
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .repo_list {
