@@ -50,7 +50,7 @@ let test = "";
 queryFetch(
   `
   query MyQuery {
-    user(login: "codingmage") {
+    user(login: "brokewhale") {
       repositories(last: 20, isFork: false) {
         nodes {
           name
@@ -102,7 +102,7 @@ function userTemplate(avatarUrl, name, login, websiteUrl) {
 
           <img src="./img/small.jpeg" alt="">
       </span>
-      <span class="small-name">codingmage</span>
+      <span class="small-name">brokewhale</span>
   </h3>
  
     <div  class="top_info">
